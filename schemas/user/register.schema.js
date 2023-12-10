@@ -16,7 +16,7 @@ const registerSchema = joi.object({
     )
     .required()
     .messages({ ...joiMsg.errorMsg, ...joiMsg.errorMsgPassword }),
-  email: joi.string().email().required().message(joiMsg.errorMsg),
+  email: joi.string().email().required().messages(joiMsg.errorMsg),
 });
 
-module.exports = joi;
+module.exports = registerSchema;
