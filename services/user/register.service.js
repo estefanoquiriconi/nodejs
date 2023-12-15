@@ -1,12 +1,12 @@
 const getPool = require('../../db/getPool');
 const errors = require('../../helpers/errors.helper');
 
-const main = async (username, password, email, registrationCode) => {
+const main = async (email, username, password, registrationCode) => {
 
     try {
         const pool = await getPool();
 
-        const sqlQuery = 'INSET INTO users (username, password, email, registrationCode) VALUES (?, ?, ?, ?)';
+        const sqlQuery = 'INSERT INTO users (username, password, email, registrationCode) VALUES (?, ?, ?, ?)';
         const values = [username, password, email, registrationCode];
 
         const [response] = await pool.query(sqlQuery, values);
@@ -15,11 +15,9 @@ const main = async (username, password, email, registrationCode) => {
             errors.conflictError('Error al insertar un nuevo usuario', 'INSERT_USER_ERROR');
         }
 
-        console.log(response);
-
         return response.insertId; 
     } catch (error) {
-        errors.internalError(error.message, 'DATA_INSERT_ERROR');
+        errors.internalServerError(error.message, 'DATA_INSER_ERROR');
     }
 
 }
