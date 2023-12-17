@@ -11,4 +11,6 @@ router.post('/users/login', userController.login);
 router.get('/users/profile', authUser, userExist, userController.profile);
 router.get('/users/profile/:userId', userExist, userController.publicProfile);
 
+router.put('/users/avatar', authUser, userExist, userController.editAvatar);
+
 module.exports = router;

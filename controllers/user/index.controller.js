@@ -3,6 +3,7 @@ const validate = require('./validate.controller');
 const login = require('./login.controller');
 const profile = require('./profile.controller');
 const publicProfile = require('./publicProfile.controller');
+const editAvatar = require('./editAvatar.controller');
 
 module.exports = {
     register,
@@ -10,4 +11,5 @@ module.exports = {
     login,
     profile,
     publicProfile,
+    editAvatar,
 };

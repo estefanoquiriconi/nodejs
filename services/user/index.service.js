@@ -4,6 +4,7 @@ const registerSendEmail = require('./registerSendEmail.service');
 const getByRegistrarionCode = require('./getByRegistrationCode.service');
 const activate = require('./activate.service');
 const getById = require('./getById.service');
+const updateAvatar = require('./updateAvatar.service.js');
 
 
 
@@ -13,5 +14,6 @@ module.exports = {
     registerSendEmail,
     getByRegistrarionCode,
     activate,
-    getById
+    getById,
+    updateAvatar,
 }
