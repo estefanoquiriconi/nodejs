@@ -7,7 +7,7 @@ const getById = require('./getById.service');
 const updateAvatar = require('./updateAvatar.service.js');
 const updateRecoverPassCode = require('./updateRecoverPassCode.service.js');
 const passwordRecoverSendEmail = require('./passwordRecoverSendEmail.service.js');
-
+const passwordUpdate = require('./passwordUpdate.service.js');
 
 
 module.exports = {
@@ -19,5 +19,6 @@ module.exports = {
     getById,
     updateAvatar,
     updateRecoverPassCode,
-    passwordRecoverSendEmail
+    passwordRecoverSendEmail,
+    passwordUpdate
 }

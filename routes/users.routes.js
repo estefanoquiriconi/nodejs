@@ -12,5 +12,6 @@ router.get('/users/profile', authUser, userExist, userController.profile);
 router.get('/users/profile/:userId', userExist, userController.publicProfile);
 router.put('/users/avatar', authUser, userExist, userController.editAvatar);
 router.post('/users/password/recover', userController.passwordRecover);
+router.put('/users/password/recover', userController.passwordUpdateByRecover);
 
 module.exports = router;
