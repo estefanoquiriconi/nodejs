@@ -6,7 +6,7 @@ const publicProfile = require('./publicProfile.controller');
 const editAvatar = require('./editAvatar.controller');
 const passwordRecover = require('./passwordRecover.controller');
 const passwordUpdateByRecover = require('./passwordUpdateByRecover.controller.js');
-
+const passwordChange = require('./passwordChange.controller.js');
 module.exports = {
     register,
     validate,
@@ -16,4 +16,5 @@ module.exports = {
     editAvatar,
     passwordRecover,
     passwordUpdateByRecover,
+    passwordChange
 };

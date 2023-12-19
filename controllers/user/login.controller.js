@@ -15,7 +15,7 @@ const main = async (req, res, next)=> {
             errors.notFoundError('Usuario no encontrado', 'USER_NOT_FOUND');
         }
 
-        const validPassword = await bcrypt.compare(req.body.password, users[0].password);
+        const validPassword = await bcrypt.compareSync(req.body.password, users[0].password);
         if(!validPassword) {
             errors.notAuthorizedError('Credenciales incorrectas', 'INVALID_CREDENTIALS');
         }
