@@ -1,10 +1,8 @@
 const validateSchema = require("../../helpers/validate.helper");
 const schema = require("../../schemas/user/login.schema");
-const randomString = require('randomstring');
 const userService = require('../../services/user/index.service.js');
 const bcrypt = require('bcrypt');
 const errors = require('../../helpers/errors.helper.js');
-const jwt = require('jsonwebtoken');
 const securityService = require('../../services/security/index.service.js');
 
 const main = async (req, res, next)=> {

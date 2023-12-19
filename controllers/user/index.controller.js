@@ -4,6 +4,7 @@ const login = require('./login.controller');
 const profile = require('./profile.controller');
 const publicProfile = require('./publicProfile.controller');
 const editAvatar = require('./editAvatar.controller');
+const passwordRecover = require('./passwordRecover.controller');
 
 module.exports = {
     register,
@@ -12,4 +13,5 @@ module.exports = {
     profile,
     publicProfile,
     editAvatar,
+    passwordRecover,
 };

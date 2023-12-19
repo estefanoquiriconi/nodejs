@@ -10,7 +10,7 @@ router.get('/users/validate/:registrationCode', userController.validate);
 router.post('/users/login', userController.login);
 router.get('/users/profile', authUser, userExist, userController.profile);
 router.get('/users/profile/:userId', userExist, userController.publicProfile);
-
 router.put('/users/avatar', authUser, userExist, userController.editAvatar);
+router.post('/users/password/recover', userController.passwordRecover);
 
 module.exports = router;
