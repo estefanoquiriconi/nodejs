@@ -3,5 +3,5 @@ const deleteFile = require('./deleteFile.service.js');
 
 module.exports = {
     savePhoto,
-    deleteFile
+    deleteFile,
 }
