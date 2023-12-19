@@ -3,6 +3,7 @@ const entryController = require("../controllers/entry/index.controller");
 const {
   authUser,
   canEdit,
+  cantVote
 } = require("../middlewares/security/index.middleware");
 const { userExist } = require("../middlewares/user/index.middleware");
 const { entryExists } = require("../middlewares/entry/index.middleware.js");
@@ -27,5 +28,13 @@ router.delete(
   canEdit,
   entryController.deletePhoto
 );
+
+
+router.post('/entries/:entryId/votes', authUser,
+userExist,
+entryExists,
+cantVote,
+entryController.vote)
+
 
 module.exports = router;
